@@ -16,7 +16,7 @@ def _parse_data_to_get_todays_games(games) -> str:
             teams = game_info["gameUrlCode"].split("/")[1]
             first_team = teams[0:3]
             second_team = teams[3:]
-            game_time += f"{first_team}vs{second_team}@{start_time}\n"
+            game_time += f'{first_team}vs{second_team}@{start_time}\n'
     return game_time
 
 
