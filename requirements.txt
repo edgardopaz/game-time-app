@@ -1,0 +1,6 @@
+flask
+black
+python-dotenv
+flask-wtf
+tweepy
+apscheduler
