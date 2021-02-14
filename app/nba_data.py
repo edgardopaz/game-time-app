@@ -8,11 +8,11 @@ import requests
 
 
 def _parse_data_to_get_todays_games(games) -> str:
-    game_time = ''
+    game_time = "Today's NBA schedule:\n\n"
     today_date = datetime.now().strftime("%Y%m%d")
     for game_info in games:
         if game_info["startDateEastern"] == today_date:
-            start_time = ''.join(game_info["startTimeEastern"].split())
+            start_time = game_info["startTimeEastern"].replace("ET", "").strip()
             teams = game_info["gameUrlCode"].split("/")[1]
             first_team = teams[0:3]
             second_team = teams[3:]
